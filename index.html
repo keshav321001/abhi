@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie | Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Foodie<span>.</span></h2>
+
+            <ul id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#reservation" class="nav-btn">Book Table</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">WELCOME TO FOODIE RESTAURANT</p>
+
+            <h1>Enjoy Delicious <br>
+                <span>Food & Taste</span>
+            </h1>
+
+            <p>
+                Experience the best food in town.
+                Fresh ingredients, amazing flavors
+                and unforgettable moments.
+            </p>
+
+            <a href="#menu" class="main-btn">Explore Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <p class="subtitle">OUR SPECIAL MENU</p>
+        <h2>Popular Dishes</h2>
+
+        <div class="food-container">
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600"
+                     alt="Burger">
+                <h3>Cheese Burger</h3>
+                <p>Fresh and juicy cheese burger.</p>
+                <h4>₹199</h4>
+                <button onclick="addToCart('Cheese Burger',199)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-157 pizza"
+                     alt="Pizza">
+                <h3>Italian Pizza</h3>
+                <p>Delicious cheesy Italian pizza.</p>
+                <h4>₹299</h4>
+                <button onclick="addToCart('Italian Pizza',299)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600"
+                     alt="Pasta">
+                <h3>White Sauce Pasta</h3>
+                <p>Creamy pasta with fresh herbs.</p>
+                <h4>₹249</h4>
+                <button onclick="addToCart('White Sauce Pasta',249)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+        <h3 class="cart">Your Cart: <span id="cartCount">0</span> Items</h3>
+        <p class="cart">Total: ₹<span id="cartTotal">0</span></p>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div>
+            <p class="subtitle">ABOUT OUR RESTAURANT</p>
+            <h2>We Serve Delicious Food With Love</h2>
+            <p>
+                Foodie Restaurant is a place where taste meets quality.
+                We prepare delicious meals using fresh ingredients
+                and serve every customer with love.
+            </p>
+            <a href="#contact" class="main-btn">Contact Us</a>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800"
+             alt="Restaurant dining">
+    </section>
+
+    <!-- Reservation -->
+    <section class="reservation" id="reservation">
+        <p class="subtitle">BOOK YOUR TABLE</p>
+        <h2>Make A Reservation</h2>
+
+        <form id="bookingForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="date" id="date" required>
+            <input type="number" id="guests" placeholder="Number of Guests"
+                   min="1" max="20" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+
+        <p id="bookingMessage"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <h2>Foodie<span>.</span></h2>
+        <p>Delicious Food | Great Taste | Happy Moments</p>
+        <p>Jaipur, Rajasthan, India</p>
+        <p>Contact: +91 9876543210</p>
+        <p class="copyright">© 2026 Foodie Restaurant. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

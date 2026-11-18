@@ -1,0 +1,274 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+    color: white;
+}
+
+/* Navbar */
+header {
+    background: #171717;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+.logo span, footer span {
+    color: #ff9f0a;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar ul a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul a:hover {
+    color: #ff9f0a;
+}
+
+.nav-btn, .main-btn {
+    background: #ff9f0a;
+    color: #111;
+    padding: 12px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 25px;
+}
+
+/* Hero */
+.hero {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background:
+    linear-gradient(90deg, #000 15%, #0009 55%, transparent),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600")
+    center/cover;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.tagline, .subtitle {
+    color: #ff9f0a;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #ff9f0a;
+}
+
+.hero-content p {
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Menu */
+.menu-section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.menu-section h2, .reservation h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.food-card {
+    background: #202020;
+    padding: 15px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-10px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.food-card h3 {
+    margin: 15px;
+}
+
+.food-card p {
+    color: #bbb;
+}
+
+.food-card h4 {
+    color: #ff9f0a;
+    margin: 15px;
+    font-size: 22px;
+}
+
+.food-card button, .reservation button {
+    background: #ff9f0a;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cart {
+    margin-top: 25px;
+}
+
+/* About */
+.about {
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.about h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.about img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Reservation */
+.reservation {
+    padding: 80px 8%;
+    text-align: center;
+    background: #202020;
+}
+
+.reservation form {
+    max-width: 600px;
+    margin: auto;
+    display: grid;
+    gap: 15px;
+}
+
+.reservation input {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+#bookingMessage {
+    margin-top: 20px;
+    color: #ff9f0a;
+}
+
+/* Footer */
+footer {
+    background: #080808;
+    text-align: center;
+    padding: 45px 15px;
+}
+
+footer p {
+    margin-top: 15px;
+    color: #bbb;
+}
+
+.copyright {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 25px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .navbar ul {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        background: #171717;
+        width: 100%;
+        flex-direction: column;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .food-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+}
